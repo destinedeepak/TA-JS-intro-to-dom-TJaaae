@@ -97,7 +97,7 @@ console.log("element")
 console.log(box16.previousElementSibling)
 console.log(box16.nextElementSibling)
 console.log(box16.firstElementChild)
-console.log( box16.lastElementChild)
+console.log(box16.lastElementChild)
 
 
 // Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
