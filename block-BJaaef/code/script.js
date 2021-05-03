@@ -17,10 +17,7 @@ got.houses.forEach(house=>{
         divInner.append(img); 
 
         let h2 = document.createElement('h2');
-        h2.innerText = person.name;
-        let span = document.createElement('span');
-        span.innerText = house.name;
-        h2.append(span);
+        h2.innerText = person.name ;
 
         divOuter.append(divInner, h2);
         
