@@ -18,6 +18,7 @@ HINT:
 let allHrsArray = Array.from(allHrs)
 */
 let allHrsArray = Array.from(allHrs);
+
 // Set the border of the all the hr elements to "1px solid tomato"
 allHrsArray.forEach((element)=>{
   element.style.border = "1px solid tomato";
@@ -25,7 +26,7 @@ allHrsArray.forEach((element)=>{
 
 // Change the background of all the hr to "antiquewhite" using for of loop.
 for(let element of allHrsArray){
-  element.style.borderColor = "antiquewhite"
+  element.style.backgroundColor = "antiquewhite"
 }
 
 // Change the 'border-radius' of all the hr to "5px" using array.
@@ -40,10 +41,12 @@ heading.style.textAlign = "center"
 heading.style.fontSize = "3rem"
 
 // Change the border of hr with class 'image' to `2px solid purple`.
-document.querySelector("hr[class=image]").style.border = "2px solid purple"
+document.querySelectorAll("hr.image").forEach(ele=>{
+  ele.style.border = "2px solid purple"
+})
 
 // Hide the box number 17 (last box).
-document.querySelectorAll("div")[18].style.display ="none"
+document.querySelector(".seventeen").style.display ="none"
 
 // Change the border of all the hr element from solid to dashed type
 allHrsArray.forEach((element)=>{
@@ -58,9 +61,7 @@ para.innerText = "querySelector returns an element you can maupulate but querySe
 
 // Remove all the elements from box 1
 let divOne = document.querySelector(".one");
-Array.from(divOne.children).forEach(element =>{
-  element.remove()
-})
+divOne.innerHTML = "";
 
 
 // Replace all the elements inside box 1 with the para (you created above)
@@ -84,25 +85,29 @@ Do the following after selecting box 16 and storing in variable named box16
   - Focus on the difference between element and node
 */
 let box16 = document.querySelector(".sixteen");
-
+console.log("node")
 console.log(box16.parentElement)
 console.log(box16.childNodes)
 console.log(box16.previousSibling)
 console.log(box16.nextSibling)
 console.log(box16.firstChild)
-console.log(box16.lastChild)
+console.log(typeof box16.lastChild)
 
+console.log("element")
 console.log(box16.previousElementSibling)
 console.log(box16.nextElementSibling)
 console.log(box16.firstElementChild)
-console.log(box16.lastElementChild)
+console.log( box16.lastElementChild)
+
 
 // Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
-let newPara = document.createTextNode("Append inserts as last child");
+let newPara = document.createElement('p')
+newPara.innerText = "Append inserts as last child"
 document.querySelector(".two").append(newPara)
 
 // Select box 3 and prepend a new paragraph element with content "Prepend inserts as first child" just before hr element.
-let newPara1 = document.createTextNode("Prepend inserts as first child");
+let newPara1 = document.createElement('p')
+newPara1.innerText = "Prepend inserts as first child"
 document.querySelector(".three").prepend(newPara1)
 
 // Change the border of box 4 to '1px solid black'
@@ -117,8 +122,7 @@ document.querySelector(".six").style.color = "black"
 // Change the font size of the para inside box 1 to 0.8rem.
 para.style.fontSize = "0.8rem"
 
-// Change the background of all the alternate boxes (1, 3, 5, ....) to aliceblue
-console.log("from here")
+// Change the background of all the alternate boxes (1, 3, 5, ....) to aliceblue  
 Array.from(document.querySelectorAll('.box')).forEach((element,index)=>{
   if(index % 2 === 0){
     element.style.background = "aliceblue"
@@ -143,7 +147,7 @@ document.querySelector('body').style.backgroundColor = "bisque"
 let btn = document.createElement('button');
 
 // textContent of the button should be 'Click Me'
-btn.innerText = 'Click Me'
+btn.textContent = 'Click Me'
 
 // Change the background of the btn to 'oldlace'
 btn.style.background = 'oldlace'
@@ -155,7 +159,7 @@ btn.style.fontSize = '1 rem'
 btn.style.border = '1px solid black'
 
 // Add the padding of '0.5rem 1rem' to btn
-btn.style.padding = '0.5 rem 1rem'
+btn.style.padding = '0.5rem 1rem'
 
 // Append the btn in box number 9
 document.querySelector(".nine").append(btn)
@@ -168,9 +172,7 @@ imgElm.src = `https://images.unsplash.com/photo-1592500595497-d1f52a40b207?ixlib
 let boxSeven = document.querySelector(".seven")
 
 // Remove all the elements form box seven
-Array.from ( boxSeven.children).forEach((element)=>{
-  element.remove()
-})
+boxSeven.innerHTML = ""
 
 // Append the imgElm to the box no 7
 boxSeven.append(imgElm)
@@ -186,7 +188,7 @@ let boxFive = document.querySelector(".five")
 let inputEle = document.createElement('input')
 
 // Change the placeholder property of the input element to "Enter you email!"
-inputEle.setAttribute('placeholder','Enter your email')
+inputEle.placeholder= 'Enter your email';
 
 // Append the input element to the box 5 you selected above
 boxFive.append(inputEle);
