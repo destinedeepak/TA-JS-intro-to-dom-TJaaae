@@ -118,7 +118,6 @@
     let root = document.querySelector('ul');
 
     books.forEach((ele )=>{
-      console.log(ele);
       let li = document.createElement('li');
       li.classList.add('flex-48');
       

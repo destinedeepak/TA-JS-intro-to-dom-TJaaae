@@ -69,13 +69,13 @@ img{
 /* flex */
 .flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .wrap{
     flex-wrap: wrap;
 }
 .flex-48{
-    flex: 0 1 32.5%;
+    flex: 0 1 32%;
 }
 .header {
     background: rgb(55,126,128);
@@ -97,6 +97,7 @@ li {
    background-color: #FFFFFF;
    padding: 1.5rem;
    border-radius: 5px;
+   margin-left: 1rem;
 }
 cite {
     display: inline-block;
