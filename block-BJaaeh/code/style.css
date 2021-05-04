@@ -10,17 +10,18 @@ body {
     font-size: 30px;
     min-height: 100vh;
     align-items: center;
-    background: chocolate;
+    background: wheat;
 }
 
 .clock {
     width: 30rem;
     height: 30rem;
-    border: 20px solid white;
+    border: 10px solid dimgrey;
     border-radius: 50%;
     margin: 50px auto;
     position:relative;
     padding: 2rem;
+    box-shadow: 2px 2px 20px 2px rgb(165, 165, 165);
 }
 
 .clock-face{
@@ -41,3 +42,18 @@ body {
   transition: all 0.05s;
   transition-timing-function:cubic-bezier(0.1, 2.7, 0.58, 1);
 }
+img {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+/* .min-maker {
+  width: 20px;
+  height: 5px;
+  color: black;
+  background: black;
+  position: absolute;
+  transform: rotate(90deg);
+  left:96px;
+} */
