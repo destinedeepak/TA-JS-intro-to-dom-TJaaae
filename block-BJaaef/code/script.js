@@ -27,6 +27,8 @@ got.houses.forEach(house=>{
         let a = document.createElement('a');
         a.classList.add('btn');
         a.innerText = "Learn More!"
+        a.href = person.wikiLink
+        a.target = "_blank"
 
         article.append(divOuter, p, a)
         
